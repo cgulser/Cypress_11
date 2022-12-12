@@ -8,6 +8,20 @@ it('Test 1',()=>{
 
     // 2. Yol
     //cy.contains('Log in').click()
+
+    //contains() metni text olarak buluyor
+    //username = 'manager'
+    cy.get('#UserName').type('manager')
+    //password = 'Manager1!'
+    cy.get('#Password').type('Manager1!')
+
+    cy.get('#btnSubmit').click()
+   
+    //ASSERT
+
+    // 
+    cy.url().should('include','/Admin/UserAdmin') 
+
 })
 
 })
